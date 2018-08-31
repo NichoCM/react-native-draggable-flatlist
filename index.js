@@ -358,7 +358,7 @@ class SortableFlatList extends Component {
           onScroll={(params) => {
               const { nativeEvent } = params;
               this._scrollOffset = nativeEvent.contentOffset[horizontal ? 'x' : 'y'];
-              this.props.onScroll ? this.props.onScroll(params);
+              this.props.onScroll && this.props.onScroll(params);
           }}
           scrollEventThrottle={16}
         />
