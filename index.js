@@ -357,7 +357,7 @@ class SortableFlatList extends Component {
           keyExtractor={keyExtractor || this.keyExtractor}
           onScroll={(params) => {
               const { nativeEvent } = params;
-              this._scrollOffset = nativeEvent.contentOffset[horizontal ? 'x' : 'y']
+              this._scrollOffset = nativeEvent.contentOffset[horizontal ? 'x' : 'y'];
               this.props.onScroll ? this.props.onScroll(params);
           }}
           scrollEventThrottle={16}
